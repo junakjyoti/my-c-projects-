@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+void bubbleSort(int arr[], int size)
+ {
+      int temp;
+      for(int i = 0; i < size; i++)
+     {
+        for(int j = 0; j < (size - 1) - i; j++)
+        {
+           if(arr[j] > arr[j+1])
+           {
+               temp = arr[j];
+               arr[j] = arr[j + 1];
+               arr[j + 1] = temp;
+           }
+        }
+     }
+ }
+
+ int main()
+ {
+     int arr[50], n;
+    
+     cout << "How many elements do you want to create array with: ";  
+     cin >> n;
+     cout << "Enter array elements: ";
+     for(int i = 0; i < n; i++)
+     {
+         cin >> arr[i];
+     }
+     bubbleSort(arr, n);
+     cout << "\nThe sorted array is shown bellow: ";
+     for(int i = 0; i < n; i++)
+     {
+        cout << arr[i] << "\t";
+      }
+      return 0;
+ }
